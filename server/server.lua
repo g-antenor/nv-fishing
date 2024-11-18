@@ -36,7 +36,7 @@ end)
 
 lib.callback.register('fishing:server:CheckBait', function(source, itemName)
     local hasitem = utils.SearchItem(source, itemName)
-    print(hasitem, itemName)
+
     if hasitem > 0 then
         return true
     end
@@ -77,7 +77,7 @@ end)
 
 lib.callback.register('fishing:server:CheckWeapon', function(source, itemName)
     local hasItem = utils.SearchItem(source, itemName)
-    print(hasItem, itemName)
+
     if hasItem > 0 then return true end
     return false
 end)

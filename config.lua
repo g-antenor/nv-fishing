@@ -20,6 +20,8 @@ Config = {
         [12] = { model = 'fishinglootbig',  skill = math.random(4, 6), difficulty = 75, chance = 1, openOcean = false},
     },
 
+    StressDegreeChance = 5,
+
     Chance = 5,
     Rewards = 'fishinglootbig',
     AmountDrop = {1, 2},

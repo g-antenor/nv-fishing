@@ -1,4 +1,3 @@
-local QBCore = exports['qb-core']:GetCoreObject()
 local inFishing = false
 
 local function isDeepWater(playerCoords)
@@ -52,12 +51,12 @@ local function StartFishing()
             utils.Notify(Lang:t('notify.success.fishing_success'), 'success', 5000)
         end, fishingModel, 'success')
         local stress = lib.callback.await('fishing:server:StressDegree', false, math.random(1, 2))
-        if stress then
+        if stress and Config.StressDegreeChance >= math.random(1, 100) then
             utils.Notify(Lang:t('notify.success.stress'), 'success', 5000)
         end
     else
         lib.callback('fishing:server:DropItems', false, function()
-            utils.Notify(Lang:t('notify.success.no_fishing_rod'), 'success', 5000)
+            utils.Notify(Lang:t('notify.error.no_fishing_rod'), 'error', 5000)
         end, nil, 'fail')
     end
     

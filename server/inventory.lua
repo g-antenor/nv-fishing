@@ -7,7 +7,7 @@ function utils.SearchItem(source, itemName)
     local itemCount = 0
 
     if Config.Inventory == 'ox' then
-        itemCount = exports.ox_inventory:Search(source, 'count', itemName) or 0
+        itemCount = exports.ox_inventory:GetItemCount(source, itemName) or 0
     elseif Config.Inventory == 'qb' then
         itemCount = exports['qb-inventory']:GetItemCount(source, itemName) or 0
     end
