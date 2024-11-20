@@ -41,7 +41,7 @@ Follow the steps below to install and configure the script:
         - **Images**: Copy all images from `installation/images` and paste them into `ox_inventory/web/images`.
 
     - **qb-inventory**:
-        - **Items**: Copy all items from `installation/ox_inventory` and paste them into `qb-core/shared/items`.
+        - **Items**: Copy all items from `installation/qb-inventory` and paste them into `qb-core/shared/items`.
         - **Images**: Copy all images from `installation/images` and paste them into `qb-inventory/html/images`.
 <br>
 4. Modify `config.lua` according to your needs, then start the server.
